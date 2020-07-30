@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>Survey Questions</h1>
+<style>
+body {
+background-image: url('surveybackground.jpg');"
+background-size: cover;
+}
+</style>
+
+<!--For background image of page jpg link is mentioned in the style tags--> 
+<!--reference page is given to go back to login page-->
+
+<a href="login.html">Go to Login Page</a>
+<p style="font-size:120%;">What kind of health insurace plan are you willing to select?</p>
+<input type="radio" id="A traditional indemnity plan" 
+name="insurance type" value="A traditional indemnity plan">
+<label for="A traditional indemnity plan">A traditional indemnity plan</label><br>
+<input type="radio" id="Health Insurance"
+name="Health Insurance" value="Health Insurance">
+<label for="Health Insurance">Health Insurance</label><br>
+<input type="radio" id="Life Insurance"
+name="life Insurance" value="Life Insurance">
+<label for="Life Insurance">Life Insurance</label><br>
+
+<!--Radio type buttons are used to select a set of related options in the question-->
+<!--label tag here is used to provide usability improvement for mouse users-->
+
+<p style="font-size:120%;">How successful is the company in implemeting
+these insurance plans?</p>
+<input type="radio" id="Excellent" 
+name="Excellent" value="Excellent">
+<label for="Excellent">Excellent</label><br>
+<input type="radio" id="Average" 
+name="Average" value="Average">
+<label for="Average">Average</label><br>
+<input type="radio" id="Not Successful" 
+name="Not Successful" value="Not Successful">
+<label for="Not Successful">Not Successful</label><br>
+
+<p style="font-size:120%;">How  is the company in managing
+the Long Term Disability(LTD) Cost?</p>
+<input type="radio" id="Fully Covered" 
+name="Fully Covered" value="Fully Covered">
+<label for="Fully Covered">Fully Covered</label><br>
+<input type="radio" id="Partially Covered" 
+name="Partially Covered" value="Partially Covered">
+<label for="Partially Covered">Partially Covered</label><br>
+<input type="radio" id="Not Covered" 
+name="Not Covered" value="Not Covered">
+<label for="Not Covered">Not Covered</label><br>
+
+
+<p style="font-size:120%;">On the below scale of 1 to 10 how do you rate the
+companies health insurance policies?</p>
+<input type="radio" id="1-4 points" 
+name="1-4 points" value="1-4 points">
+<label for="1-4 points">1-4 points</label><br>
+<input type="radio" id="5-7 points" 
+name="5-7 points" value="5-7 points">
+<label for="5-7 points">5-7 points</label><br>
+<input type="radio" id="8-10 points" 
+name="8-10 points" value="8-10 points">
+<label for="8-10 points">8-10 points</label><br>
+
+
+<p style="font-size:120%;">Does the company follows the anti-discrimination
+rule while issuing health insurance policies?</p>
+<input type="radio" id="Yes" 
+name="Yes" value="Yes">
+<label for="Yes">Yes</label><br>
+<input type="radio" id="No" 
+name="No" value="No">
+<label for="No">No</label><br>
+<input type="radio" id="It happened before" 
+name="It happened before" value="It happened before">
+<label for="It happened before">It happened before</label><br><br>
+<a class="SUBMIT" href="login.html">SUBMIT</a>
+
+<!--paragraph is styled by using font size, color-->
+<!--referance is given to submit to go back to login page after submission-->
+</body>
+</html>
