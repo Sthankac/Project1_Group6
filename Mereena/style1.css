@@ -1,0 +1,17 @@
+ /*Style added for Labels */
+  label {
+    color: #B4886B;
+    font-weight: bold;
+    display: block;
+    width: 150px;
+    float: left;
+    }
+    label:after { content: ": " }
+ /* Style added for popup */
+    .popup{display:none; 
+        background:  #B4886B;
+        border:1px solid black; 
+        width:50%; 
+        height:100px;
+        text-align: center;}
+   
