@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head><title>Signin page</title>
+
+<link rel="stylesheet" type="text/css" href="signup.css">
+
+</head>
+<body background ="p2.JPG">
+
+<h2>SIGN IN PAGE</h2>
+<p><b>Please sign in to login</b></p>
+
+
+    
+ <form onsubmit="return validatePassword()" class="modal-content" action="signup2.html"><!-- on clicking the submit button, it returns the value from validatePassword() and goes to the next page-->
+
+    <div class="container">
+
+      <hr>
+      <label for="email"><b>Email ID</b></label>
+      <input type="text" placeholder="Enter Email" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" title="Please provide a valid email address" required><br> <!--https://www.w3schools.com/tags/att_input_pattern.asp, the pattern attribute lets the user give a valid email address-->
+      
+      <label for="psw1"><b>Password</b></label>
+      <input type="password" id=password placeholder="Enter Password" name="psw1" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least eight or more characters" required><br><!--The password can only be provided by satisfying the given rules.-->
+      
+      <label for="psw2"><b>Confirm Password</b></label>
+      <input type="password" id=confirm_password placeholder="Confirm Password" name="psw2" required><br>
+
+      <div class="clearfix"><!-- clearfix is used to clear the contents entered, after the press of buttons-->
+
+      <button class="button" type="submit" value="go to signup">Next page</button>
+        </div>
+    </div>
+  </form>
+
+<script type="text/javascript">
+  
+    var password = document.getElementById("password")
+  , confirm_password = document.getElementById("confirm_password");
+
+function validatePassword(){
+  if(password.value != confirm_password.value) {
+    confirm_password.setCustomValidity("Passwords Don't Match");/*https://codepen.io/diegoleme/pen/surIK, funtion to see if the passwords match*/
+  } else {
+    confirm_password.setCustomValidity('');
+  }
+}
+
+password.onchange = validatePassword;
+confirm_password.onkeyup = validatePassword;
+</script>
+
+</body>
+</html>

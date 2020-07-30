@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head><title>Survey page</title>
+
+<link rel="stylesheet" type="text/css" href="survsty.css">
+
+</head>
+<body background ="p4.JPG">
+
+<form onsubmit="return handleData()" method="post" action= "akhilsurvey.html"><!-- on clicking the button, it returns the value from the function handledata() and goes to the next page-->
+<h3>Do you think our health insurance rates are reasonable ?</h3>
+
+  
+  <input type="radio" id="y" name="opt" value="yes" required><!-- type is radio here, radio buttons are used when only one option is needed to be selected from a given set of options-->
+  <label for="yes">YES</label><br><br>
+  <input type="radio" id="n" name="opt" value="no" required>
+  <label for="no">NO</label><br><br>
+
+<h3>Rate your overall level of satisfaction with the curretn health insurance provided by us out of 5:</h3>
+
+ 
+  <select name="rate" id="rate" required><!--select provides a dropdown list from which we can select a value.-->
+    <option value="1">1</option>
+    <option value="2">2</option>
+    <option value="3">3</option>
+    <option value="4">4</option>
+    <option value="5">5</option>
+  </select><!--</form>-->
+
+<h3>How easy is it to file a claim with us ?</h3>
+
+  <input type="radio" id="1" name="opt1" value="easy" required>
+  <label for="yes">Easy</label><br><br>
+  <input type="radio" id="2" name="opt1" value="moderate" required>
+  <label for="no">Moderate</label><br><br>
+  <input type="radio" id="3" name="opt1" value="difficult" required>
+  <label for="no">Difficult</label><br><br>
+
+
+
+<h3>Check all the given employee insurance claims that are important to you</h3>
+<div style="visibility:hidden; color:blue; " id="chk_option_error">
+Please select at least one option.
+</div>
+  <input type="checkbox" id="claim1" name="claim[]" value="medical"><!--checkbox is used when we need to choose multiple options at the same time-->
+  <label for="claim1">Medical</label><br><br>
+  <input type="checkbox" id="claim2" name="claim[]" value="life">
+  <label for="claim2">Life</label><br><br>
+  <input type="checkbox" id="claim3" name="claim[]" value="disability">
+  <label for="claim3">Disability</label><br><br>
+  <input type="checkbox" id="claim4" name="claim[]" value="retirement">
+  <label for="claim4">Retirement</label><br><br>
+  
+
+
+
+<h3>Rank in order of importance to you regarding your health insurance[1-5]:</h3>
+
+  <label><b>Network of Doctors</b></label>
+  <input type="number" id="quantity" name="quantity" min="1" max="5" required><br><br><!-- type=number lets us choose only a number and min & max decodes the range-->
+
+  <label><b>Timelines of claims processing</b></label>
+  <input type="number" id="quantity" name="quantity" min="1" max="5" required><br><br>
+
+  <label><b>Cost of health insurance premiums per paycheck</b></label>
+  <input type="number" id="quantity" name="quantity" min="1" max="5" required><br><br>
+
+  <label><b>Customer service support on claims</b></label>
+  <input type="number" id="quantity" name="quantity" min="1" max="5" required><br><br>
+
+  <label><b>Out-of-pocket costs(co-insurance, prescription co-pays)</b></label>
+  <input type="number" id="quantity" name="quantity" min="1" max="5" required><br><br>
+
+  <button class="button" type="submit" value="go to signup">Next page</button>
+
+
+</form>
+
+<script type="text/javascript">
+	function handleData()/*if atleast one of the checkbox is not selected before submitting, it displays error*/
+{
+    var form_data = new FormData(document.querySelector("form"));
+    if(!form_data.has("claim[]"))
+    {
+        document.getElementById("chk_option_error").style.visibility = "visible";
+      return false;      
+    }
+    else
+    {
+        document.getElementById("chk_option_error").style.visibility = "hidden";
+      return true;
+    }
+
+}
+</script>
+
+</body>
+</html>
+
+
+ 
