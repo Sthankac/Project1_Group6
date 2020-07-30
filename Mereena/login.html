@@ -1,0 +1,73 @@
+<html>
+<head>
+ <link rel="stylesheet" href="style.css">
+ <script src="script.js"></script>
+<title>Login Page</title>
+</head>
+<body>
+    <!--Link for about us page-->
+<button onclick="document.location ='aboutus.html'">See details</button>
+<!--Form validation-->
+<form name="myForm" action="survey.html" onsubmit="return validateForm()" method="post">
+<br style="line-height:8 ;">
+ <center><h1 style="color: black;">LOGIN</h1></center>
+<table width="35%" color="white" align="center">
+
+<!--Table for login and password-->
+
+<tr>
+<td >Email Address</td>
+<td ><input type="email" size=25 name="mailid" placeholder="your_name@gmail.com" pattern="[0-9A-Za-z_]*@gmail\.com" required></td>
+</tr>
+
+<tr>
+<td>Password</td>   
+  
+<td> <input type="password" id="psw" name="psw" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" 
+    title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" required></td>
+</tr>
+
+
+</table>
+<!--Reset Button-->
+
+<center><input type="RESET"> 
+    <input type="submit" value="Submit"></center>
+
+<!--Creating forget Password and user-->
+ <div class="container">
+
+<br style="line-height: 3;" >
+    <center>
+   <span class="psw" >Forgot <a href="pwd.html">password?</a></span>
+	<span class="psw">Forgot <a href="user.html">user?</a></span>
+ </center> </div>
+ 
+</form>
+<!--Creating a link for Sign Up page-->
+<center>
+<button onclick="document.location ='signup.html'">Sign Up</button>
+</center>
+</body>
+</html>
+<!--Reference: W3Schools(html)-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+	
